@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Website | Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="subpages">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="focus.html">Focus Session</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="navigation">
+            <button id="scroll-account" class="btn">Account Management</button>
+            <button id="scroll-ai-usage" class="btn">AI Usage</button>
+            <button id="scroll-child-monitoring" class="btn">Child Monitoring</button>
+        </aside>
+        <section id="account-management" class="settings-section">
+            <h1>Account Management</h1>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                <label for="password">Change Password:</label>
+                <input type="password" id="password" placeholder="New password">
+                <label for="email">Update Email:</label>
+                <input type="email" id="email" placeholder="Enter new email">
+                <button type="submit" class="btn primary-btn">Save Changes</button>
+            </form>
+        </section>
+        <section id="ai-usage" class="settings-section">
+            <h1>AI Usage</h1>
+            <div class="toggle">
+                <label>
+                    <input type="checkbox" id="ai-toggle">
+                    Enable AI Features
+                </label>
+            </div>
+            <div class="usage-history">
+                <h2>Usage History</h2>
+                <p>No usage data available.</p>
+            </div>
+        </section>
+        <section id="child-monitoring" class="settings-section">
+            <h1>Child Monitoring</h1>
+            <label for="screen-time">Screen Time Limit (hours):</label>
+            <input type="number" id="screen-time" placeholder="e.g., 2">
+            <label for="content-filters">Content Filters:</label>
+            <select id="content-filters">
+                <option value="strict">Strict</option>
+                <option value="moderate">Moderate</option>
+                <option value="none">None</option>
+            </select>
+            <div class="activity-reports">
+                <h2>Activity Reports</h2>
+                <p>Reports will appear here.</p>
+            </div>
+            <button class="btn primary-btn">Save Settings</button>
+        </section>
+    </main>
+    <footer>
+        <p>Motivation Website &copy; 2025</p>
+    </footer>
+    <script src="settings.js"></script>
+</body>
+</html>

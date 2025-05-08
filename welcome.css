@@ -1,0 +1,144 @@
+:root {
+    --primary-bg: #1e3c72;
+    --secondary-bg: #2a5298;
+    --sidebar-bg: #000000;
+    --text-color: #36e942;
+    --button-bg: #36e942;
+    --button-hover-bg: #000000;
+    --button-hover-text: #36e942;
+    --welcome-font-size: 2.5rem;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 4px;
+    background: var(--text-color);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: var(--text-color);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+}
+
+.hamburger-icon::after {
+    top: 8px;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    transition: max-height 0.5s ease, background-color 0.3s ease;
+}
+
+.dropdown-content.show {
+    max-height: 300px;
+    background: var(--sidebar-bg);
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: var(--text-color);
+    color: var(--sidebar-bg);
+}
+
+main {
+    margin-left: 270px;
+    padding: 50px 20px;
+}
+
+#welcome-text-container {
+    font-size: var(--welcome-font-size);
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#welcome-text-container span {
+    display: inline-block;
+    opacity: 0;
+    margin-right: 5px;
+    transition: opacity 0.5s ease-in;
+}
+
+.helpful-websites button {
+    background: var(--button-bg);
+    color: var(--sidebar-bg);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.helpful-websites button:hover {
+    background: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    background: var(--sidebar-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+}

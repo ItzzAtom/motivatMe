@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Website | Focus Session</title>
+    <link rel="stylesheet" href="focus.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <nav>
+            <ul class="header-links">
+                <li><a href="welcome.html">Welcome Back</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="insight.html">Insights</a></li>
+                <li><a href="focus.html" class="active">Focus</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="ai.html">AI Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Timer Section -->
+        <section id="timer-setup">
+            <h1>Focus Timer</h1>
+            <div id="timer-display">
+                <span id="timer-value">5:00</span>
+            </div>
+            <div id="custom-time">
+                <input type="number" id="custom-minutes" placeholder="Minutes" min="0">
+                <button id="set-custom-time" class="btn primary-btn">Set Time</button>
+            </div>
+            <div id="timer-controls">
+                <button class="timer-btn" data-time="30">+0:30</button>
+                <button class="timer-btn" data-time="60">+1:00</button>
+                <button class="timer-btn" data-time="300">+5:00</button>
+            </div>
+            <div id="timer-actions">
+                <button id="start-pause-btn" class="action-btn">▶</button>
+            </div>
+            <div id="background-options">
+                <h2>Choose a Background Video</h2>
+                <div class="backgrounds">
+                    <button class="bg-btn" data-video="videoplayback.mp4">Background 1</button>
+                    <button class="bg-btn" data-video="cyberpunk-night-city-walk-rainy-calm-nighttime-ambience-sleep-focus-chill-relax-synthwave-mix-ytshorts.savetube.me.mp4">Background 2</button>
+                    <button class="bg-btn" data-video="background3.mp4">Background 3</button>
+                    <button class="bg-btn" data-video="background4.mp4">Background 4</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks-section">
+            <h2>Your Tasks</h2>
+            <ul id="task-list">
+                <!-- User tasks will be dynamically added here -->
+            </ul>
+            <div id="task-input-container">
+                <input type="text" id="task-input" placeholder="Enter a new task">
+                <button id="add-task-btn" class="btn secondary-btn">Add Task</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Motivation Website &copy; 2025</p>
+    </footer>
+    <script src="focus.js"></script>
+</body>
+</html>

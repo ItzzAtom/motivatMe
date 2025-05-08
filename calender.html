@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Calendar</title>
+    <link rel="stylesheet" href="calender.css">
+    <script defer src="calender.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="header-links">
+                <li><a href="welcome.html">Welcome Back</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="insight.html">Insights</a></li>
+                <li><a href="focus.html">Focus</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="ai.html">AI Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Interactive Calendar</h1>
+        <div class="calendar-container">
+            <div id="calendar"></div>
+            <button id="add-event-btn" class="add-event-button">Add Event</button>
+        </div>
+    </main>
+    <div id="event-menu" class="event-menu hidden">
+        <button id="close-event-menu" class="close-button">&times;</button>
+        <form id="event-form">
+            <label for="event-title">Event Title</label>
+            <input type="text" id="event-title" required>
+            <label for="event-time">Event Time</label>
+            <input type="time" id="event-time" required>
+            <button type="submit" class="add-event-button">Add Event</button>
+        </form>
+    </div>
+</body>
+</html>
